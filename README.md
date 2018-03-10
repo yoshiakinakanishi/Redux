@@ -19,7 +19,7 @@
 # Reducer
 
 - Reducerは状態を変化させるための関数
-- Reducerの具体例(スプレッド演算子)
+- Reducerの具体例 ― スプレッド演算子
 ```
 function books(state = null, action) { // 第1引数は状態を示すオブジェクト(state)、第2引数は動作を示すオブジェクト(action)
     switch (action.type) { // actionには必ずtypeというプロパティが生える、行った動作を示す文字列などが渡ってくる
@@ -41,7 +41,7 @@ function books(state = null, action) { // 第1引数は状態を示すオブジ�
 }
 ```
 
-- Reducerの具体例(Object.assignメソッド)
+- Reducerの具体例 ― Object.assignメソッド
 
 ```
 function books(state = null, action) { // 第1引数は状態を示すオブジェクト(state)、第2引数は動作を示すオブジェクト(action)
