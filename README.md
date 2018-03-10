@@ -1,5 +1,3 @@
-# redux
-
 # reduxの3原則
 
 **１．Single source of truth**
