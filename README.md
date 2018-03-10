@@ -40,6 +40,7 @@ function books(state = null, action) { // 第1引数は状態を示すオブジ�
     }
 }
 ```
+```
 function books(state = null, action) { // 第1引数は状態を示すオブジェクト(state)、第2引数は動作を示すオブジェクト(action)
     switch (action.type) { // actionには必ずtypeというプロパティが生える、行った動作を示す文字列などが渡ってくる
         case 'START_READING': // 本を読み始めたことを示すSTART_READINGというactionタイプ
@@ -58,3 +59,4 @@ function books(state = null, action) { // 第1引数は状態を示すオブジ�
             return; state;
     }
 }
+```
