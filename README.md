@@ -2,11 +2,11 @@
 
 # reduxの3原則
 
-１．Single source of truth
+**１．Single source of truth**
 
 ・アプリケーション内の全ての状態を一枚岩の大きなオブジェクトとして管理
 
-２．State in read-only
+**２．State in read-only**
 
 ・アプリケーションの状態を直接的に変更することはできない
 
@@ -14,7 +14,7 @@
 
 ・こうすることでデータの流れが完全に一方向になって、余計な副作用の発生を防ぐ
 
-３. Changes are made with pure functions
+**３. Changes are made with pure functions**
 
 ・状態変更は副作用がない、純粋関数によって行われる
 
