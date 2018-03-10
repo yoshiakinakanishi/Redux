@@ -15,3 +15,28 @@
 - 状態変更は副作用がない、純粋関数によって行われる
 - 同じ入力値を渡すたびに、決まって同じ出力値が得られる関数＝純粋関数
 - Actionを入力として受け取り、Reducerで状態変化させ、それを出力する
+
+# Reducer
+
+- Reducerは状態を変化させるための関数
+- Reducerの例
+```
+function books(state = null, action) {
+    switch (action.type) {
+        case 'START_READING':
+            return {
+                ...state,
+                status : 1,
+            };
+
+        case 'FINISH READING':
+            return {
+                ...state,
+                status : 2,
+            };
+        
+        default:
+            return; state;
+    }
+}
+```
