@@ -26,13 +26,13 @@ function books(state = null, action) { // 第1引数は状態を示すオブジ�
         case 'START_READING': // 本を読み始めたことを示すSTART_READINGというactionタイプ
             return {
                 ...state, // スプレッド演算子は元の値に影響を与えない
-                status : 1,
+                status: 1,
             };
 
         case 'FINISH READING': // 本を読み終えたことを示すFINISH_READINGというactionタイプ
             return {
                 ...state,
-                status : 2,
+                status: 2,
             };
         
         default:
@@ -41,22 +41,20 @@ function books(state = null, action) { // 第1引数は状態を示すオブジ�
 }
 ```
 
-- Reducerの具体例 ― Object.assignメソッド
+- Reducerの具体例 ― Object.assignメソッド（元の値に影響を与えない方法としてGOOD）
 
 ```
-function books(state = null, action) { // 第1引数は状態を示すオブジェクト(state)、第2引数は動作を示すオブジェクト(action)
-    switch (action.type) { // actionには必ずtypeというプロパティが生える、行った動作を示す文字列などが渡ってくる
-        case 'START_READING': // 本を読み始めたことを示すSTART_READINGというactionタイプ
-            return {
-                ...state, // スプレッド演算子は元の値に影響を与えない
-                status : 1,
-            };
+function books(state = null, action) { 
+    switch (action.type) { 
+        case 'START_READING': 
+            return Object.assign({}, state, {
+                status: 1,
+            });
 
-        case 'FINISH READING': // 本を読み終えたことを示すFINISH_READINGというactionタイプ
-            return {
-                ...state,
-                status : 2,
-            };
+        case 'FINISH READING': 
+            return Object.assign({}, state, {
+                status: 2,
+            });
         
         default:
             return; state;
