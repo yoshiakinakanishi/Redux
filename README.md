@@ -21,16 +21,16 @@
 - Reducerは状態を変化させるための関数
 - Reducerの例
 ```
-function books(state = null, action) { // books関数を定義、第1引数は状態を示すオブジェクト(state)、第2引数は動作を示すオブジェクト(action)
+function books(state = null, action) { // 第1引数は状態を示すオブジェクト(state)、第2引数は動作を示すオブジェクト(action)
     switch (action.type) { // actionには必ずtypeというプロパティが生える、行った動作を示す文字列などが渡ってくる
-        case 'START_READING':
-            return {
-                ...state,
-                status : 1,
+        case 'START_READING': // 本を読み始めたことを示すSTART_READINGというactionタイプ
+            return {
+                ...state, // スプレッド演算子は元の値に影響を与えない
+                status : 1,
             };
 
-        case 'FINISH READING':
-            return {
+        case 'FINISH READING': // 本を読み終えたことを示すFINISH_READINGというactionタイプ
+            return {
                 ...state,
                 status : 2,
             };
@@ -40,3 +40,21 @@ function books(state = null, action) { // books関数を定義、第1引数は�
     }
 }
 ```
+function books(state = null, action) { // 第1引数は状態を示すオブジェクト(state)、第2引数は動作を示すオブジェクト(action)
+    switch (action.type) { // actionには必ずtypeというプロパティが生える、行った動作を示す文字列などが渡ってくる
+        case 'START_READING': // 本を読み始めたことを示すSTART_READINGというactionタイプ
+            return {
+                ...state, // スプレッド演算子は元の値に影響を与えない
+                status : 1,
+            };
+
+        case 'FINISH READING': // 本を読み終えたことを示すFINISH_READINGというactionタイプ
+            return {
+                ...state,
+                status : 2,
+            };
+        
+        default:
+            return; state;
+    }
+}
