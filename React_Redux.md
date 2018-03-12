@@ -79,7 +79,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(TodoApp);
 ```
 
 # Components
-- コンポーネント側はPropsで渡ってきたinputTaskとaddTaskを呼び出すだけ
+- Action CreatorやActionのDispacthもContainers側でおこなっているので、コンポーネント側はPropsで渡ってきたinputTaskとaddTaskを呼び出すだけ
 - コンポーネントのRedux依存が消えて、再利用性も高まる純粋なReactコンポーネント
 ```
 import React from 'react';
