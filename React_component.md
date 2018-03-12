@@ -24,10 +24,13 @@
       return <div>こんにちは、{this.props.name}さん</div>;
     }
   };
-  
 ```
 
-# データの受け渡し(Props)
+# データの受け渡し(props)
+- コンポーネントを定義する関数の引数にpropsが渡される（引数の名前は何でもいいがpropsと名付けるのが一般的）
+- propsとして受け取った変数はobject型で、プロパティとしてnameプロパティを持つ
+- 親コンポーネントから子コンポーネントに任意の名前で、任意の値を渡すことができる
+
 
 ```
 const Hello = (props) => {
@@ -42,8 +45,5 @@ ReactDOM.render{
   </div>
   document.getElementById('root')
 );
+```
 
-
-    
-    
-}
