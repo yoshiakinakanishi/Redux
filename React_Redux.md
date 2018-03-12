@@ -51,12 +51,12 @@ export const addTask = (task) => ({
 - ReactとReduxの橋渡しが責務、ここでJSXを記述するのは誤り
 - mapStateToPropsでStoreにあるtask,tasksというStateをコンポーネントのPropsに渡す
 - mapDispatchToPropsで該当のActionをDispatch(発行)させる関数をコンポーネントのProps
-- これにより、TodoAppコンポーネントにはPropsとして次の4つが渡される
-- task＝Inputフォームに入力されたタスク
-- tasks＝タスクの配列
-- addTask＝タスクを追加する関数
-- InputTask＝タスクを入力する関数
-- mapStateToPropsでreturnしたオブジェクトはconnect先のコンポーネントのPropsとして受け取ることができる
+- このmapStateToPropsとmapDispatchToPropsによって、TodoAppコンポーネントには次の４つのPropsが渡される
+- task ＝ Inputフォームに入力されたタスク
+- tasks ＝ タスクの配列
+- addTask ＝ タスクを追加する関数
+- InputTask ＝ タスクを入力する関数
+- mapStateToPropsでreturnしたオブジェクトは、connect先のコンポーネントのPropsとして受け取ることができる
 - 複数のReducerを組み合わせて使っている場合、必要な部分のStoreのみ取り出してreturnしてあげれば、不要なStateをコンポーネントに渡さずに済む
 
 ```
