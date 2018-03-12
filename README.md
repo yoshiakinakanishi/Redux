@@ -41,7 +41,7 @@ function books(state = null, action) { // 第1引数は状態を示すオブジ�
 }
 ```
 
-- Reducerの具体例 ― Object.assignメソッド（元の値に影響を与えない方法としてGOOD！）
+- Reducerの具体例 ― Object.assignメソッド（元の値に影響を与えない方法としてGOOD）
 
 ```
 function books(state = null, action) { 
