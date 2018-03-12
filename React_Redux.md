@@ -1,3 +1,8 @@
+# React-Redux
+- Storeの状態変化に応じてViewを描画させるが、View構造が多段構造になるほど、該当部分のViewのみを再描画するのはとてもキツイ、、、
+- そこで、reactとreduxを組み合わせるのを手助けしてくれるライブラリを使う
+- reduxが公式として打ち出しているReactとの連携ツールがreact-redux
+
 # Reducer
 ```
 const initialState = {
