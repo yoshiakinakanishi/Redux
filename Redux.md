@@ -19,13 +19,13 @@
 # Reducer
 
 - Reducerは状態を変化させるための関数
-- Reducerの具体例 ― スプレッド演算子
+- Reducerの具体例 ― スプレッド演算子を使う
 ```
 function books(state = null, action) { // 第1引数は状態を示すオブジェクト(state)、第2引数は動作を示すオブジェクト(action)
     switch (action.type) { // actionには必ずtypeというプロパティが生える、行った動作を示す文字列などが渡ってくる
         case 'START_READING': // 本を読み始めたことを示すSTART_READINGというactionタイプ
             return {
-                ...state, // スプレッド演算子は元の値に影響を与えない！
+                ...state, // スプレッド演算子は元の値に影響を与えない
                 status: 1,
             };
 
@@ -41,7 +41,7 @@ function books(state = null, action) { // 第1引数は状態を示すオブジ�
 }
 ```
 
-- Reducerの具体例 ― Object.assignメソッド（元の値に影響を与えない方法としてGOOD）
+- Reducerの具体例 ― Object.assignメソッドを使う　※元の値に影響を与えない方法としておススメの書き方
 
 ```
 function books(state = null, action) { 
@@ -61,6 +61,3 @@ function books(state = null, action) {
     }
 }
 ```
-
-
-
