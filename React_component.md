@@ -30,7 +30,8 @@
 - コンポーネントを定義する関数の引数にpropsが渡される（引数の名前は何でもいいがpropsと名付けるのが一般的）
 - propsとして受け取った変数はobject型で、プロパティとしてnameプロパティを持つ
 - 親コンポーネントから子コンポーネントに任意の名前で、任意の値を渡すことができる
-
+- propsとして渡せる値は、文字列、数値、配列、オブジェクト、関数、変数など
+- 原則として{}を囲うことで値を渡す　※文字列はクオートでOK
 
 ```
 const Hello = (props) => {
@@ -44,6 +45,27 @@ ReactDOM.render{
     <Hello name="勝海舟" />
   </div>
   document.getElementById('root')
+);
+```
+
+# Children
+- Helloで囲まれた文字列がprops.childrenとして渡されている
+- 文字列だけでなく、複雑な子要素やReactエレメントも受け渡すことができる
+
+```
+const Hello = props => {
+  return (
+    <div>こんにちは、{props.children}さん</div>
+  );
+};
+
+ReactDOM.render(
+  <div>
+    <Hello>
+      坂本龍馬
+    </Hello>
+  </div>,
+  docment.getElementById('root')
 );
 ```
 
