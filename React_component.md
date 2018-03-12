@@ -6,7 +6,7 @@
 --- Functional Component ---
 
   const Hello = (props) => {
-   return <div>こんにちは、{props.name}さん</div>;
+    return <div>こんにちは、{props.name}さん</div>;
   };
 ```
 
@@ -16,10 +16,12 @@
 - Class Componentにはライフサイクルメソッドという特殊なメソッドを定義できる
 
 ```
-▼Functional Component
+--- Class Component
 
-  const Hello = (props) => {
-   return <div>こんにちは、{props.name}さん</div>;
+  class Hello extends React.component {
+    render() {
+      return <div>こんにちは、{this.props.name}さん</div>;
+    }
   };
 ```
 
