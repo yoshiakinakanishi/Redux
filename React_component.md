@@ -70,6 +70,7 @@ ReactDOM.render(
 ```
 
 # 複数の値を渡す
+- 単純に列挙する方法
 ```
 const Profile = (props) => {
   return (
@@ -82,6 +83,27 @@ const Profile = (props) => {
 
 ReactDOM.render(
   <Profile name='坂本龍馬' birthday='1836/01/03' />
-  docment.getElementById('root')
+  document.getElementById('root')
+);
+```
+- オブジェクトに入っている値を展開して渡す方法
+```
+const Profile = (props) => {
+  return (
+    <ul>
+      <li>名前：{props.name}</li>
+      <li>誕生日：{props.birthday}</li>
+    </ul>
+  )
+};
+
+const profile = {
+  name: '坂本龍馬',
+  birthday: '1803/01/03',
+}
+
+ReactDOM.render(
+  <Profile {...profile} />
+  document.getElementById('root')
 );
 ```
