@@ -51,6 +51,8 @@ export const addTask = (task) => ({
 - tasks＝タスクの配列
 - addTask＝タスクを追加する関数
 - InputTask＝タスクを入力する関数
+- mapStateToPropsでreturnしたオブジェクトはconnect先のコンポーネントのPropsとして受け取ることができる
+- 複数のReducerを組み合わせて使っている場合、必要な部分のStoreのみ取り出してreturnしてあげれば、不要なStateをコンポーネントに渡さずに済む
 
 ```
 import { connect } from 'react-redux';
