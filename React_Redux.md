@@ -44,11 +44,10 @@ export const addTask = (task) => ({
 - mapStateToPropsでStoreにあるtask,tasksというStateをコンポーネントのPropsに渡す
 - mapDispatchToPropsで該当のActionをDispatch(発行)させる関数をコンポーネントのProps
 - これにより、TodoAppコンポーネントにはPropsとして次の4つが渡される
-  - task
-  - tasks
-  - addTask
-  - InputTask
-
+  - task・・・Inputフォームに入力されたタスク
+  - tasks・・・タスクの配列
+  - addTask・・・タスクを追加する関数
+  - InputTask・・・タスクを入力する関数
 
 ```
 import { connect } from 'react-redux';
