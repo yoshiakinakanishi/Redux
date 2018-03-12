@@ -3,7 +3,7 @@
 - Functional Componentは関数定義で、propsを引数を受け取り、JSXをreturnする
 
 ```
-▼Functional Component
+--- Functional Component ---
 
   const Hello = (props) => {
    return <div>こんにちは、{props.name}さん</div>;
