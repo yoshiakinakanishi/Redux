@@ -113,8 +113,8 @@ export default function TodoApp({ task, tasks, inputTask, addTask }) {
 # Index
 - 最上位のコンポーネントをProviderでラップし、propsにStoreを与えてStoreを保持する仕組み
 - Providerを用いて、そのPropsにStoreを渡す
-- コンポーネントのimport元をcomponentsからcontainersに変更
-- storeの生成も別ファイルに切り出しておくとなお良し
+- コンポーネントのimport元をcomponentsではなく、containersにする
+- storeの生成も別ファイルに切り出しておけば尚良し
 ```
 import React from 'react';
 import { Provider } from 'react-redux';
