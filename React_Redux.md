@@ -77,6 +77,8 @@ export default connect(mapStateToProps, mapDispatchToProps)(TodoApp);
 ```
 
 # Components
+- コンポーネント側はPropsで渡ってきたinputTaskとaddTaskを呼び出すだけ
+- コンポーネントのRedux依存が消えて、再利用性も高まる
 ```
 import React from 'react';
 
@@ -100,6 +102,9 @@ export default function TodoApp({ task, tasks, inputTask, addTask }) {
 ```
 
 # Index
+- Providerを用いて、そのPropsにStoreを渡す
+- コンポーネントのimport元をcontainersに変更
+- storeの生成も別ファイルに切り出した方がなお良し
 ```
 import React from 'react';
 import { Provider } from 'react-redux';
