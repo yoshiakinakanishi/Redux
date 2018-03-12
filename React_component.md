@@ -8,6 +8,7 @@
   const Hello = (props) => {
     return <div>こんにちは、{props.name}さん</div>;
   };
+  
 ```
 
 - Class Componentはクラスによって定義される
@@ -16,12 +17,33 @@
 - Class Componentにはライフサイクルメソッドという特殊なメソッドを定義できる
 
 ```
---- Class Component
+--- Class Component ---
 
   class Hello extends React.component {
     render() {
       return <div>こんにちは、{this.props.name}さん</div>;
     }
   };
+  
 ```
 
+# データの受け渡し(Props)
+
+```
+const Hello = (props) => {
+  return <div>こんにちは、{props.name}さん</div>
+};
+
+ReactDOM.render{
+  <div>
+    <Hello name="坂本竜馬" />
+    <Hello name="西郷隆盛" />   
+    <Hello name="勝海舟" />
+  </div>
+  document.getElementById('root')
+);
+
+
+    
+    
+}
