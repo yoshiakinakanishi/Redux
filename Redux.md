@@ -41,7 +41,7 @@ function books(state = null, action) { // 第1引数は状態を示すオブジ�
 }
 ```
 
-- Reducerの具体例 ― Object.assignメソッドを使う　※元の値に影響を与えない方法として良い書き方
+- Reducerの具体例 ― Object.assignメソッドを使う　※スプレッド演算子と同様に元の値に影響を与えない参照渡しではなく、値のコピーをしてやる
 
 ```
 function books(state = null, action) { 
