@@ -41,10 +41,12 @@ export const addTask = (task) => ({
 ```
 
 # Containers
+- Reactのコンポーネントをラップしたコンポーネント
+- ReduxのStoreやActionを受け取って、ReactコンポーネントのPropsとして渡す役割を担う
+- ReactとReduxの橋渡しが責務、ここでJSXを記述するのは誤り
 - mapStateToPropsでStoreにあるtask,tasksというStateをコンポーネントのPropsに渡す
 - mapDispatchToPropsで該当のActionをDispatch(発行)させる関数をコンポーネントのProps
 - これにより、TodoAppコンポーネントにはPropsとして次の4つが渡される
-
 - task＝Inputフォームに入力されたタスク
 - tasks＝タスクの配列
 - addTask＝タスクを追加する関数
@@ -78,7 +80,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(TodoApp);
 
 # Components
 - コンポーネント側はPropsで渡ってきたinputTaskとaddTaskを呼び出すだけ
-- コンポーネントのRedux依存が消えて、再利用性も高まる
+- コンポーネントのRedux依存が消えて、再利用性も高まる純粋なReactコンポーネント
 ```
 import React from 'react';
 
@@ -102,6 +104,7 @@ export default function TodoApp({ task, tasks, inputTask, addTask }) {
 ```
 
 # Index
+- 最上位のコンポーネントをProviderでラップし、propsにStoreを与えてStoreを保持する仕組み
 - Providerを用いて、そのPropsにStoreを渡す
 - コンポーネントのimport元をcontainersに変更
 - storeの生成も別ファイルに切り出した方がなお良し
