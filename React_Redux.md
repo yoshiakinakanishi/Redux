@@ -44,7 +44,7 @@ export const addTask = (task) => ({
 - mapStateToPropsでStoreにあるtask,tasksというStateをコンポーネントのPropsに渡す
 - mapDispatchToPropsで該当のActionをDispatch(発行)させる関数をコンポーネントのProps
 - これにより、TodoAppコンポーネントにはPropsとして次の4つが渡される
-  - task
+  - task
   - tasks
   - addTask
   - InputTask
